@@ -1,0 +1,9 @@
+l = ["joy", 'fear', "anger", "sadness", "disgust", "shame", "guilt"]
+l.sort()
+label_freq = {}
+for label, _ in data: 
+    label_freq[label] = label_freq.get(label, 0) + 1
+
+# print the labels and their counts in sorted order 
+for l in sorted(label_freq, key=label_freq.get, reverse=True):
+    print("{:10}({})  {}".format(convert_label(l, emotions), l, label_freq[l]))
